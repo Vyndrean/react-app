@@ -1,0 +1,94 @@
+body {
+    margin-inline: 5%;
+    margin-block: 0;
+}
+
+.title-area {
+    text-align: center;
+}
+
+.content {
+    margin-inline: 2em;
+    min-height: 300px;
+    padding: 25px;
+}
+
+.contact-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    row-gap: 100px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.contact-form {
+    grid-column: 1 / 2;
+}
+
+.contact-info {
+    grid-column: 2 / 2;
+    display: block;
+    margin-left: 10%;
+}
+
+.contact-info div{
+    margin-block-end: 15px;
+}
+
+form {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 20px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+form label,input, textarea {
+    display: block;
+}
+
+form input,textarea {
+    width: 100%;
+    margin-block-end: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form textarea{
+    min-width: 100%;
+    max-width: 500px;
+    min-height: 100px;
+    max-height: 180px;
+}
+
+form button {
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    padding: 5px 10px;
+    display: block;
+    float: right;
+
+}
+
+@media (orientation: portrait) {
+    body {
+        margin: 0;
+    }
+
+    .contact-form {
+        grid-column: 1/2;
+    }
+
+    .contact-info {
+        grid-column: 1/2;
+    }
+
+    form {
+        width: 150%;
+        height: 100%;
+    }
+
+    form textarea{
+        max-width: 100px;
+    }
+}
